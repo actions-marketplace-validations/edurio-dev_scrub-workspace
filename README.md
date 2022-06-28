@@ -25,7 +25,7 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - uses: edurio-dev/scrub-workspace@v3
+      - uses: edurio-dev/scrub-workspace@v4
       - uses: actions/checkout@v2
       - run: echo Hello World
 ```
