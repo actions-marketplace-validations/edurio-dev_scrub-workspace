@@ -1,9 +1,6 @@
 #!/bin/bash
 
-set -e # fail on error
-
-# include hidden files 
-# https://askubuntu.com/questions/740805/how-can-i-remove-all-files-from-current-directory-using-terminal
+set -e
 shopt -s dotglob
-rm -rf *
-
+REPO_NAME=${GITHUB_REPOSITORY#*/}
+find /__w/${REPO_NAME}/${REPO_NAME}/. -name . -o -prune -exec rm -rf -- {} + || true
